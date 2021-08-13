@@ -33,5 +33,5 @@ json2mongo(query); // {
 
 ## License
 
-MIT © [Thomas Watson Steen](https://github.com/watson)
+MIT © [Thomas Watson Steen](https://github.com/watson)  
 MIT © [Thiago Lagden](https://github.com/lagden)
