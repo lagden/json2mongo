@@ -1,15 +1,20 @@
 {
   "name": "@tadashi/json2mongo",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "A MongoDB Extended JSON conversion utility which converts Strict Mode syntax to JavaScript Mode",
   "type": "module",
   "main": "src/json2mongo.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src"
+  ],
   "scripts": {
     "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/watson/json2mongo.git"
+    "url": "git://github.com/lagden/json2mongo.git"
   },
   "keywords": [
     "mongo",
@@ -24,7 +29,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/watson/json2mongo/issues"
+    "url": "https://github.com/lagden/json2mongo/issues"
   },
   "dependencies": {
     "mongodb": "4.1.0"
@@ -32,7 +37,7 @@
   "devDependencies": {
     "prettier": "2.3.2"
   },
-  "homepage": "https://github.com/watson/json2mongo#readme",
+  "homepage": "https://github.com/lagden/json2mongo#readme",
   "engines": {
     "node": ">=14.16.0"
   },
