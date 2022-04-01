@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/json2mongo",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A MongoDB Extended JSON conversion utility which converts Strict Mode syntax to JavaScript Mode",
   "type": "module",
   "main": "src/json2mongo.js",
@@ -31,11 +31,14 @@
   "bugs": {
     "url": "https://github.com/lagden/json2mongo/issues"
   },
+  "peerDependencies": {
+    "mongodb": ">= 4 < 5"
+  },
   "dependencies": {
-    "mongodb": "4.1.0"
+    "mongodb": "4.4.1"
   },
   "devDependencies": {
-    "prettier": "2.3.2"
+    "prettier": "2.6.1"
   },
   "homepage": "https://github.com/lagden/json2mongo#readme",
   "engines": {

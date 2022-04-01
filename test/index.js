@@ -2,6 +2,9 @@ import assert from 'node:assert'
 import * as mongo from 'mongodb'
 import json2mongo from '../src/json2mongo.js'
 
+const _base = Buffer.alloc(16, 0x00)
+_base.write('42.42')
+
 const query = {
 	_id: {$oid: '123456789012345678901234'},
 	created: {$date: '2013-01-01T00:00:00.000Z'},
@@ -29,7 +32,7 @@ const query = {
 const result = {
 	_id: mongo.ObjectId(query._id.$oid),
 	created: new Date('2013-01-01T00:00:00.000Z'),
-	decimal: new mongo.Decimal128(Buffer.from('42.42')),
+	decimal: new mongo.Decimal128(_base),
 	ts: mongo.Timestamp(1412180887, 1),
 	fkey1: new mongo.DBRef(
 		query.fkey1.$ref,

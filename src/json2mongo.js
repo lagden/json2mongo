@@ -2,6 +2,8 @@ import * as mongo from 'mongodb'
 
 function json2mongo(obj) {
 	for (const [key, val] of Object.entries(obj)) {
+		let _base = Buffer.alloc(16, 0x00)
+
 		switch (key) {
 			case '$binary':
 			case '$type':
@@ -9,7 +11,8 @@ function json2mongo(obj) {
 			case '$date':
 				return new Date(val)
 			case '$decimal128':
-				return new mongo.Decimal128(Buffer.from(val))
+				_base.write(val)
+				return new mongo.Decimal128(_base)
 			case '$timestamp':
 				return new mongo.Timestamp(val.t, val.i)
 			case '$regex':
@@ -36,6 +39,7 @@ function json2mongo(obj) {
 					return mongo.Long.fromNumber(val)
 				}
 		}
+
 		if (typeof val === 'object') {
 			obj[key] = json2mongo(val)
 		}
