@@ -30,22 +30,22 @@ const query = {
 }
 
 const result = {
-	_id: mongo.ObjectId(query._id.$oid),
+	_id: new mongo.ObjectId(query._id.$oid),
 	created: new Date('2013-01-01T00:00:00.000Z'),
 	decimal: new mongo.Decimal128(_base),
-	ts: mongo.Timestamp(1412180887, 1),
+	ts: new mongo.Timestamp({t: 1412180887, i: 1}),
 	fkey1: new mongo.DBRef(
 		query.fkey1.$ref,
-		mongo.ObjectId(query.fkey1.$id.$oid),
+		new mongo.ObjectId(query.fkey1.$id.$oid),
 		query.fkey1.$db,
 	),
 	fkey2: new mongo.DBRef(
 		query.fkey2.$ref,
-		mongo.ObjectId(query.fkey2.$id.$oid),
+		new mongo.ObjectId(query.fkey2.$id.$oid),
 	),
-	binary: mongo.Binary(Buffer.from('foo')),
-	minKey: mongo.MinKey(),
-	maxKey: mongo.MaxKey(),
+	binary: new mongo.Binary(Buffer.from('foo')),
+	minKey: new mongo.MinKey(),
+	maxKey: new mongo.MaxKey(),
 	numberLong: mongo.Long.MAX_VALUE,
 	foo: undefined,
 	bar: /[0-9]/,

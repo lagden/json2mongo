@@ -14,7 +14,7 @@ function json2mongo(obj) {
 				_base.write(val)
 				return new mongo.Decimal128(_base)
 			case '$timestamp':
-				return new mongo.Timestamp(val.t, val.i)
+				return new mongo.Timestamp({t: val.t, i: val.i})
 			case '$regex':
 			case '$options':
 				return new RegExp(obj.$regex, obj.$options)
@@ -23,7 +23,7 @@ function json2mongo(obj) {
 			case '$ref':
 			case '$id':
 			case '$db': {
-				const id = obj.$id._bsontype ? obj.$id : mongo.ObjectId(obj.$id.$oid)
+				const id = obj.$id._bsontype ? obj.$id : new mongo.ObjectId(obj.$id.$oid)
 				return new mongo.DBRef(obj.$ref, id, obj.$db)
 			}
 			case '$undefined':
