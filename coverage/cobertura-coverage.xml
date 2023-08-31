@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="57" lines-covered="57" line-rate="1" branches-valid="24" branches-covered="23" branch-rate="0.9582999999999999" timestamp="1693481516375" complexity="0" version="0.1">
+  <sources>
+    <source>/Users/lagden/_dev/old/htdocs/lab/js/module/@tadashi/json2mongo</source>
+  </sources>
+  <packages>
+    <package name="main" line-rate="1" branch-rate="0.9582999999999999">
+      <classes>
+        <class name="json2mongo.js" filename="src/json2mongo.js" line-rate="1" branch-rate="0.9582999999999999">
+          <methods>
+            <method name="json2mongo" hits="21" signature="()V">
+              <lines>
+                <line number="4" hits="21"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="1" hits="1" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="2" hits="1" branch="false"/>
+            <line number="3" hits="1" branch="false"/>
+            <line number="4" hits="21" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="5" hits="21" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="6" hits="39" branch="false"/>
+            <line number="7" hits="39" branch="false"/>
+            <line number="8" hits="39" branch="false"/>
+            <line number="9" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="10" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="11" hits="1" branch="false"/>
+            <line number="12" hits="1" branch="false"/>
+            <line number="13" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="14" hits="1" branch="false"/>
+            <line number="15" hits="1" branch="false"/>
+            <line number="16" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="17" hits="1" branch="false"/>
+            <line number="18" hits="1" branch="false"/>
+            <line number="19" hits="1" branch="false"/>
+            <line number="20" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="21" hits="1" branch="false"/>
+            <line number="22" hits="1" branch="false"/>
+            <line number="23" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="24" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="25" hits="2" branch="false"/>
+            <line number="26" hits="2" branch="false"/>
+            <line number="27" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="28" hits="1" branch="false"/>
+            <line number="29" hits="1" branch="false"/>
+            <line number="30" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="31" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="32" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="33" hits="2" branch="true" condition-coverage="0% (0/1)"/>
+            <line number="34" hits="2" branch="false"/>
+            <line number="35" hits="2" branch="false"/>
+            <line number="36" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="37" hits="3" branch="false"/>
+            <line number="38" hits="3" branch="false"/>
+            <line number="39" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="40" hits="1" branch="false"/>
+            <line number="41" hits="1" branch="false"/>
+            <line number="42" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="43" hits="1" branch="false"/>
+            <line number="44" hits="1" branch="false"/>
+            <line number="45" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="46" hits="2" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="47" hits="2" branch="false"/>
+            <line number="48" hits="39" branch="false"/>
+            <line number="49" hits="23" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="50" hits="39" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="51" hits="20" branch="false"/>
+            <line number="52" hits="20" branch="false"/>
+            <line number="53" hits="39" branch="false"/>
+            <line number="54" hits="5" branch="true" condition-coverage="100% (1/1)"/>
+            <line number="55" hits="21" branch="false"/>
+            <line number="56" hits="1" branch="false"/>
+            <line number="57" hits="1" branch="false"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

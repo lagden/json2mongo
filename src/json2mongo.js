@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import * as mongo from 'mongodb'
 
 function json2mongo(obj) {
@@ -6,38 +7,44 @@ function json2mongo(obj) {
 
 		switch (key) {
 			case '$binary':
-			case '$type':
+			case '$type': {
 				return new mongo.Binary(obj.$binary, obj.$type)
-			case '$date':
+			}
+			case '$date': {
 				return new Date(val)
-			case '$decimal128':
+			}
+			case '$decimal128': {
 				_base.write(val)
 				return new mongo.Decimal128(_base)
-			case '$timestamp':
-				return new mongo.Timestamp({t: val.t, i: val.i})
+			}
+			case '$timestamp': {
+				return new mongo.Timestamp({ t: val.t, i: val.i })
+			}
 			case '$regex':
-			case '$options':
+			case '$options': {
 				return new RegExp(obj.$regex, obj.$options)
-			case '$oid':
+			}
+			case '$oid': {
 				return new mongo.ObjectId(val)
+			}
 			case '$ref':
 			case '$id':
 			case '$db': {
 				const id = obj.$id._bsontype ? obj.$id : new mongo.ObjectId(obj.$id.$oid)
 				return new mongo.DBRef(obj.$ref, id, obj.$db)
 			}
-			case '$undefined':
+			case '$undefined': {
 				return undefined
-			case '$minKey':
+			}
+			case '$minKey': {
 				return new mongo.MinKey()
-			case '$maxKey':
+			}
+			case '$maxKey': {
 				return new mongo.MaxKey()
-			case '$numberLong':
-				if (typeof val === 'string') {
-					return mongo.Long.fromString(val)
-				} else {
-					return mongo.Long.fromNumber(val)
-				}
+			}
+			case '$numberLong': {
+				return typeof val === 'string' ? mongo.Long.fromString(val) : mongo.Long.fromNumber(val)
+			}
 		}
 
 		if (typeof val === 'object') {
